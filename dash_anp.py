@@ -20,13 +20,13 @@ df = gerar_df()
 colunasUteis = ['MÊS','PRODUTO','REGIÃO','ESTADO','PREÇO MÉDIO REVENDA']
 df = df[colunasUteis]
 
-with st.sidebar
+with st.sidebar:
     st.sidebar('PRODUTIVIDADE 1000%')
     logo_teste = Image.open('logo_br_distribuidora.png')
     st.image(logo_teste,use_column_width=True)
     st.subheader('SELEÇÃO DE FILTROS')
     fProduto = st.selectbox(
-        "Selecione o combustivel"
+        "Selecione o combustivel",
         options=df['Produto'].unique()
     )
 
